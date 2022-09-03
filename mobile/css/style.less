@@ -1,0 +1,152 @@
+
+//去除默认样式
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+.w{
+    width:(693/40rem);
+    margin:0 auto;
+}
+
+//设置中间的宽度
+@total-width:750; 
+
+html{
+    //设置rem的比值
+    font-size:(100vw/@total-width*40);
+    background-color:#eff0f4;
+}
+
+//设置头部header
+.top-bar:extend(.w){
+    height:(175/40rem);
+    display:flex;
+    flex-wrap:wrap;
+    // background-color:#bfa;
+    //水平居中
+    justify-content:space-between;
+    //垂直居中
+    align-items:center;
+    a{
+        display:block;
+        color:#060614;
+        font-size:(50/40rem);
+        i{
+            color:#88898B;    
+        }
+    }
+}
+
+// 中间图片
+.img-warpper:extend(.w){
+    img{
+         width:100%;
+    }
+}
+
+//menu
+.menu:extend(.w){
+    // background-color: #060614;
+    margin-top:(35/40rem);
+    display:flex;
+    flex-flow:row wrap;
+    height:(245/40rem);
+    // 主轴对齐方式
+    justify-content:space-between;
+    // 辅轴对齐方式
+    align-content:space-between;
+    a{
+        // margin-bottom:(35/40rem);
+        width:(328/40rem);
+        height:(104/40rem);
+        line-height:(104/40rem);
+        color:white;
+        font-size:(30/40rem);  
+        border-radius:(15/40rem);
+        text-align:justify;
+        i{
+            padding:0 (33/40rem) 0 (40/40rem);
+        }            
+    }
+    .courses{
+        background-color:#F56E4E;
+    }
+    .star{
+        background-color:#BF55FD;
+    }  
+    .sub{
+        background-color:#FA386D;
+    }
+    .down{
+        background-color:#1891FC;
+    }
+}
+
+
+.img-list:extend(.w){  
+    //标题 
+    .title{
+        // line-height:(117/40rem);
+        margin:(50/40rem) 0;
+        display:flex;
+        font-size:(23/40rem);
+        justify-content:space-between;
+        h2{
+            font-size:(33/40rem);
+            color:#24253d;
+            border-left:2px solid #3a84ff;
+            padding-left:(5/40rem);
+        }
+    }
+    //图片列表
+    .item-list{ 
+        padding:(4/40rem);     
+        display:flex;
+        //设置滚动条
+        overflow:auto;
+        .item{
+            //弹性元素不收缩
+            flex:none;
+            width:(328/40rem); 
+            height:(328/40rem);
+            background-color:white;
+            box-shadow:0 1px 3px rgba(0,0,0,0.5);            
+            box-sizing:border-box;
+            padding:0 (20/40rem);
+            //设置为弹性容器
+            display:flex;
+            //弹性容器垂直排列
+            flex-direction: column;
+            //主轴均匀分布
+            justify-content:space-evenly;
+            //设置两个列表之间的距离            
+            margin-right:(24/40rem);
+
+            
+            img{
+                width:100%;
+            }
+            h3{
+                font-size:(28/40rem);
+            }
+            .touxiang{
+                display:flex;
+                align-items: center;
+
+                a{
+                    color:#969895;
+                    font-size:(25/40rem);
+                }
+                img{
+                    width:(43/40rem);
+                    margin-right:(10/40rem);
+                }
+            }
+        }
+    } 
+}
